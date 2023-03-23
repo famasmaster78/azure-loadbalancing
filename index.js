@@ -41,7 +41,7 @@ app.get("*", (req, res) => {
 	});
 
 	// Query the database
-	connection.query("SELECT * FROM users", (err, rows, fields) => {
+	connection.query("SELECT * FROM test_table", (err, rows, fields) => {
 		if (err) {
 			console.log("Error querying database: " + err);
 			return res.status(500).send("Error querying database");

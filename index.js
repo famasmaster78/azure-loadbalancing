@@ -48,17 +48,20 @@ app.get("*", (req, res) => {
 		}
 		// Update data
 		data = rows;
+
+		res.render("index", { 
+			// Render the home page with the data below
+			hostname: JSON.stringify(os.hostname()),
+			ip: JSON.stringify(os.networkInterfaces(), null, 4),
+			data: JSON.stringify(data, null, 4)
+		});
+
 	});
 
 	// Log incoming request
 	console.log("Incoming request from " + req.ip + " to " + req.originalUrl);
 
-	res.render("index", { 
-		// Render the home page with the data below
-		hostname: JSON.stringify(os.hostname()),
-		ip: JSON.stringify(os.networkInterfaces(), null, 4),
-		data: JSON.stringify(data, null, 4)
-	});
+	
 });
 
 // Listen to port

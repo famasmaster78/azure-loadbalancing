@@ -1,0 +1,21 @@
+{
+  "name": "azure-loadbalancing",
+  "version": "1.0.0",
+  "description": "A test af SQL load balancing.",
+  "main": "index.js",
+  "author": "jonas <46847021+famasmaster78@users.noreply.github.com>",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

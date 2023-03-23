@@ -10,9 +10,21 @@
 
 	Welcome home! 
 
-	<p>Hostname: <%= hostname %></p>
+	<div style="display: flex; gap: 10px;">
 
-	<pre>IP: <%= ip %></pre>
+		<div style="flex: 1">
+			<p>Hostname: <%= hostname %></p>
+
+			<pre>IP: <%= ip %></pre>
+		</div>
+
+		<div style="flex: 1">
+
+			<p>Mysql: <%= data  %></p>
+
+		</div>
+
+	</div>
 	
 </body>
 </html>

@@ -18,6 +18,9 @@ app.set('view engine', 'ejs');
 // Get all routes
 app.get("*", (req, res) => {
 
+	// Log incoming request
+	console.log("Incoming request from " + req.ip + " to " + req.originalUrl);
+
 	res.render("index", { 
 		// Render the home page with the data below
 		hostname: JSON.stringify(os.hostname()),

@@ -52,7 +52,7 @@ app.get("*", (req, res) => {
 		res.render("index", { 
 			// Render the home page with the data below
 			hostname: JSON.stringify(os.hostname()),
-			ip: JSON.stringify(os.networkInterfaces(), null, 4),
+			ip: JSON.stringify(os.networkInterfaces().eth0[0], null, 4),
 			data: JSON.stringify(data, null, 4)
 		});
 

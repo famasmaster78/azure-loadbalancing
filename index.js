@@ -44,7 +44,7 @@ app.get("*", (req, res) => {
 	connection.query("SELECT * FROM test_table", (err, rows, fields) => {
 		if (err) {
 			console.log("Error querying database: " + err);
-			return res.status(500).send("Error querying database");
+			return res.status(500).send(`Error querying database + ${process.env.DB_HOST} + ${process.env.DB_USER} + ${process.env.DB_NAME}`);
 		}
 		// Update data
 		data = rows;

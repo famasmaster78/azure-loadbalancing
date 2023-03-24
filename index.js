@@ -61,7 +61,6 @@ app.get("*", (req, res) => {
 	// Log incoming request
 	console.log("Incoming request from " + req.ip + " to " + req.originalUrl);
 
-	
 });
 
 // Listen to port
